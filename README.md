@@ -1,6 +1,6 @@
-# Fullstack App - Next.js + Nest.js + Prisma
+# Fullstack App - Next.js + Nest.js + JSON Storage
 
-Simple User CRUD application with Next.js frontend and Nest.js backend using Prisma with SQLite database.
+Simple User CRUD application with Next.js frontend and Nest.js backend using JSON file storage (db.json).
 
 ## Project Structure
 
@@ -8,6 +8,7 @@ Simple User CRUD application with Next.js frontend and Nest.js backend using Pri
 fullstack-app/
 ├── client/          # Next.js frontend (port 3000)
 ├── backend/         # Nest.js backend (port 3001)
+├── db.json          # JSON database file
 └── README.md
 ```
 
@@ -20,22 +21,12 @@ fullstack-app/
 cd backend
 ```
 
-2. Install dependencies (already done):
+2. Install dependencies:
 ```bash
 npm install
 ```
 
-3. Generate Prisma client (already done):
-```bash
-npx prisma generate
-```
-
-4. Run database migrations (already done):
-```bash
-npx prisma migrate dev --name init
-```
-
-5. Start the backend server:
+3. Start the backend server:
 ```bash
 npm run start:dev
 ```
@@ -49,7 +40,7 @@ Backend will run on http://localhost:3001
 cd client
 ```
 
-2. Install dependencies (already done):
+2. Install dependencies:
 ```bash
 npm install
 ```
@@ -71,8 +62,9 @@ Frontend will run on http://localhost:3000
 
 ## Database
 
-- SQLite database located at `backend/prisma/dev.db`
+- JSON file storage at `backend/db.json`
 - User model: id, name, email, createdAt, updatedAt
+- Data persists in db.json file (can be committed to GitHub)
 
 ## Running the Application
 
